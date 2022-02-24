@@ -1,8 +1,10 @@
 
 
+
 <form action="thankyou.php" method="post" >
     <label for="name">
         Name
+        
     </label>
     <input type="text" name="name" >
 
@@ -17,3 +19,4 @@
     <input type="text" name="address" >
     <input type="submit" value="Køb">
 </form>
+

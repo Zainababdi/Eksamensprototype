@@ -6,12 +6,34 @@
 <?php
 
 
-// user data fra kurven
 
-echo "Name " . $_POST['name'];
-echo "<br>";
-echo "Email " . $_POST['email'];
-echo "<br>";
-echo "Addresse " . $_POST['address'];
+$email = "";   // Initialize variables
+
+if(isset($_POST['email'])){
+    $email = checkEmail($_POST['email']);
+}   
+
+
+
+function checkEmail($data) {
+
+    $name = $_POST['name'];
+    // $email = $_POST['email'];
+    $address = $_POST['address'];
+    $data = trim($data); // Remove whitespace
+    $data = stripslashes($data);    // Remove backslashes
+    // user data fra kurven
+
+    echo "Name: " . $name;
+    echo "<br>";
+    echo "Email: " . $data;
+    echo "<br>";
+    echo  "Adress: " . $address;
+}
+
+
+
+
+
 
 ?>
